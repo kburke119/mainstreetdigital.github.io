@@ -647,65 +647,121 @@
 
     <!--====== TESTIMONIAL PART ENDS ======-->
 
-    <!--====== CONTACT PART START ======-->
-
-<section id="contact" class="contact-area">
+ <!--====== CONTACT PART START ======-->
+<section id="contact" class="contact-area pt-80 pb-100">
   <div class="container">
     
-    <!-- Section Title -->
+    <!-- Section Heading -->
     <div class="row justify-content-center">
-      <div class="col-lg-6 col-md-10">
-        <div class="section-title text-center pb-30">
-          <h3 class="title">Contact</h3>
-          <p class="text">Ready to simplify your marketing? Let’s connect and build a solution that works for you.</p>
-        </div>
+      <div class="col-lg-8 text-center">
+        <h3 class="title">Let’s Get in Touch</h3>
+        <p class="text mt-2">Ready to simplify your marketing? Drop your info below or reach out directly—we’ll get back to you within 24 hours.</p>
       </div>
     </div>
 
     <!-- Contact Info -->
-<div class="contact-info pt-30 pb-60">
-  <div class="row text-center">
-
-    <!-- Location -->
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="single-contact-info d-flex flex-column align-items-center">
-        <div class="contact-info-icon mb-3">
-          <i class="lni lni-map-marker" style="font-size: 32px; background: #000; color: #fff; padding: 16px; border-radius: 50%;"></i>
-        </div>
-        <div class="contact-info-content">
+    <div class="row text-center pt-50">
+      <div class="col-md-4 mb-4">
+        <div class="single-contact-info d-flex flex-column align-items-center">
+          <div class="contact-info-icon mb-3">
+            <i class="lni lni-map-marker" style="font-size: 30px; background: #000; color: #fff; padding: 16px; border-radius: 50%;"></i>
+          </div>
           <p class="text mb-0">Woodbridge, NJ</p>
           <p class="text">United States</p>
         </div>
       </div>
-    </div>
-
-    <!-- Email -->
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="single-contact-info d-flex flex-column align-items-center">
-        <div class="contact-info-icon mb-3">
-          <i class="lni lni-envelope" style="font-size: 32px; background: #ff4d4f; color: #fff; padding: 16px; border-radius: 50%;"></i>
-        </div>
-        <div class="contact-info-content">
+      <div class="col-md-4 mb-4">
+        <div class="single-contact-info d-flex flex-column align-items-center">
+          <div class="contact-info-icon mb-3">
+            <i class="lni lni-envelope" style="font-size: 30px; background: #ff4d4f; color: #fff; padding: 16px; border-radius: 50%;"></i>
+          </div>
           <a class="text" href="mailto:mainstreetdigitalconsulting@gmail.com" style="color: #0052D4; font-weight: 500;">mainstreetdigitalconsulting@gmail.com</a>
         </div>
       </div>
-    </div>
-
-    <!-- Calendly -->
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="single-contact-info d-flex flex-column align-items-center">
-        <div class="contact-info-icon mb-3">
-          <i class="lni lni-calendar" style="font-size: 32px; background: #0052D4; color: #fff; padding: 16px; border-radius: 50%;"></i>
-        </div>
-        <div class="contact-info-content">
+      <div class="col-md-4 mb-4">
+        <div class="single-contact-info d-flex flex-column align-items-center">
+          <div class="contact-info-icon mb-3">
+            <i class="lni lni-calendar" style="font-size: 30px; background: #0052D4; color: #fff; padding: 16px; border-radius: 50%;"></i>
+          </div>
           <a href="https://calendly.com/mainstreetdigitalconsulting/30min" target="_blank" style="color: #0052D4; font-weight: 500;">Book a 30-min call</a>
         </div>
       </div>
     </div>
 
+    <!-- Lead Gen Form -->
+    <div class="row justify-content-center pt-70">
+      <div class="col-lg-8">
+        <div class="contact-wrapper form-style-two">
+          <h4 class="contact-title pb-20 text-center"><i class="lni lni-envelope"></i> Start <span>Your Inquiry</span></h4>
+          <form id="contact-form" action="https://formspree.io/f/myzjodlg" method="POST">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-input mt-20">
+                  <label for="name">Name</label>
+                  <div class="input-items default">
+                    <input id="name" name="name" type="text" placeholder="Your Name" required>
+                    <i class="lni lni-user"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-input mt-20">
+                  <label for="email">Email</label>
+                  <div class="input-items default">
+                    <input id="email" name="email" type="email" placeholder="Your Email" required>
+                    <i class="lni lni-envelope"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-input mt-20">
+                  <label for="message">Message</label>
+                  <div class="input-items default">
+                    <textarea id="message" name="message" placeholder="Tell me what you need help with..." required></textarea>
+                    <i class="lni lni-pencil-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 text-center">
+                <div class="form-input light-rounded-buttons mt-30">
+                  <button class="main-btn light-rounded-two" type="submit">Send Message</button>
+                </div>
+              </div>
+            </div>
+            <p class="form-message text-center mt-3" id="success-msg" style="display:none; color: #28a745;">Thanks! We'll be in touch soon.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    
   </div>
-</div>
-<!--====== CONTACT ENDS ======-->  
+</section>
+<!--====== CONTACT PART ENDS ======-->
+
+<!-- Form success script -->
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const successMsg = document.getElementById("success-msg");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      if (response.ok) {
+        form.reset();
+        successMsg.style.display = "block";
+      }
+    });
+  });
+</script>
+<!--====== CONTACT PART ENDS ======-->
 <!--====== FOOTER PART START ======-->
 
     <section class="footer-area footer-dark">
