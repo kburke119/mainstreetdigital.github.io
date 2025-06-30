@@ -1,0 +1,91 @@
+
+
+
+/*===========================
+      17.FEATURES css 
+===========================*/
+
+
+
+/*===== features TWO =====*/
+
+.features-area{
+    background-color: $light-color-two;
+    padding-top: 120px;
+    padding-bottom: 130px;
+}
+
+
+.single-features{
+    padding: 40px 20px 52px;
+    background-color: $white;
+
+    & .features-title-icon{
+        & .features-title{
+            & a{
+                font-size: 36px;
+                line-height: 45px;
+                color: $text-color-one;
+                @include transition(0.3s);
+                font-weight: 400;
+
+                @media #{$lg} {
+                    font-size: 24px;
+                    line-height: 35px;
+                }
+                @media #{$xs} {
+                    font-size: 24px;
+                    line-height: 35px;
+                }
+                @media #{$sm} {
+                    font-size: 36px;
+                    line-height: 45px;
+                }
+
+                &:hover{
+                    color: $primary-one;
+                }
+            }
+        }
+        & .features-icon{
+            position: relative;
+            display: inline-block;
+
+            & i{
+                font-size: 88px;
+                line-height: 70px;
+                color: $primary-one;
+                position: relative;
+                z-index: 5;
+            }
+
+            & .shape{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    & .features-content{
+        & .text{
+            font-size: 14px;
+            line-height: 20px;
+            color: $text-color-one;
+            margin-top: 16px;
+        }
+
+        & .features-btn{
+            color: $primary-one;
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 29px;
+        }
+    }
+}
+
+
+
+
+
+
+
