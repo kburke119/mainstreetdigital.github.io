@@ -34,8 +34,17 @@
       border-radius: 6px;
     }
 
-    .header-area.sticky, .navbar-area.sticky, .navbar-area.sticky .navbar {
-      all: unset;
+    .header-area.sticky,
+    .navbar-area.sticky,
+    .navbar-area.sticky .navbar {
+      position: fixed !important;
+      background: #0052D4 !important;
+      box-shadow: none !important;
+    }
+
+    /* Override logo change on scroll */
+    .navbar-brand img {
+      content: url('assets/images/Logo_Final.png');
     }
   </style>
 </head>
