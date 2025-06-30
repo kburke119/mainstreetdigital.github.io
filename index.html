@@ -10,15 +10,53 @@
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/LineIcons.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/default.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <section id="home" class="slider_area pt-100 pb-100">
+  <!-- Header Navigation -->
+  <header class="header-area">
+    <div class="navbar-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.svg" alt="Logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                <ul id="nav" class="navbar-nav ml-auto">
+                  <li class="nav-item active"><a href="#home">Home</a></li>
+                  <li class="nav-item"><a href="#services">Services</a></li>
+                  <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                  <li class="nav-item"><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+              <div class="navbar-btn ml-20 d-none d-sm-block">
+                <a class="main-btn" href="https://calendly.com/mainstreetdigitalconsulting/30min">Book a Call</a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="slider_area d-flex align-items-center">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6">
-          <div class="slider-content">
+          <div class="slider-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
             <h1 class="title">Leveling The Digital Playing Field</h1>
             <p class="text">We help small businesses streamline marketing, reporting, and automation with enterprise-grade tools tailored to your scale and goals.</p>
             <ul class="slider-btn rounded-buttons">
@@ -27,8 +65,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-6 d-none d-lg-flex justify-content-center">
-          <div class="slider-image">
+        <div class="col-lg-6">
+          <div class="slider-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
             <img src="assets/images/slider/1.png" alt="Hero Image" class="img-fluid">
           </div>
         </div>
@@ -36,7 +74,8 @@
     </div>
   </section>
 
-  <section id="contact" class="contact-area">
+  <!-- Contact Section -->
+  <section id="contact" class="contact-area pt-100 pb-100 gray-bg">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-10">
@@ -80,12 +119,10 @@
   <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
   <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
-    window.addEventListener('load', () => {
-      const preloader = document.querySelector('.preloader');
-      if (preloader) preloader.classList.add('d-none');
-    });
+    new WOW().init();
   </script>
 </body>
 </html>
