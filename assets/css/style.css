@@ -2430,36 +2430,6 @@ p {
     .carousel .carousel-control-next {
       right: 30px; } }
 
-.carousel-item {
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.slider-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.slider-image-box {
-  min-height: 520px;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-image img {
-  max-height: 320px;
-  width: auto;
-  object-fit: contain;
-}
-
-
 /*===========================
       17.FEATURES css 
 ===========================*/
