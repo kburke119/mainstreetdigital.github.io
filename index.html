@@ -23,17 +23,6 @@
       background: #0052D4 !important;
     }
 
-    .header-area.sticky, .navbar-area.sticky {
-      position: fixed;
-      top: 0;
-      background-color: #0052D4 !important;
-      box-shadow: none;
-    }
-
-    .navbar-area.sticky .navbar {
-      transition: none !important;
-    }
-
     body {
       padding-top: 120px;
     }
@@ -43,6 +32,10 @@
       background-color: white;
       padding: 4px 8px;
       border-radius: 6px;
+    }
+
+    .header-area.sticky, .navbar-area.sticky, .navbar-area.sticky .navbar {
+      all: unset;
     }
   </style>
 </head>
