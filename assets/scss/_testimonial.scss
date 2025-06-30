@@ -1,0 +1,210 @@
+
+
+
+
+/*===========================
+      26.TESTIMONIAL css 
+===========================*/
+
+
+
+/*===== TESTIMONIAL STYLE THREE =====*/
+
+
+.testimonial-area{
+    padding-top: 80px;
+    padding-bottom: 130px;
+    background-color: $light-color-two;
+
+    & .testimonial-left-content{
+        & .sub-title{
+            font-size: 18px;
+            font-weight: 400;
+            color: $primary-one;
+            text-transform: uppercase;
+            
+            @media #{$xs} {
+                font-size: 16px;
+            }
+        }
+        & .title{
+            font-size: 32px;
+            padding-top: 10px;
+            color: $text-color-one;
+            
+            @media #{$lg} {
+                font-size: 30px;
+            }
+            @media #{$xs} {
+                font-size: 24px;            
+            }
+        }
+
+        & .testimonial-line{
+            padding-top: 10px;
+            
+            & li{
+                height: 5px;
+                background-color: $primary-one;
+                opacity: 0.2;
+                display: inline-block;
+                border-radius: 50px;
+                margin-right: 3px;
+                            
+                &:nth-of-type(1){
+                    width: 40px;
+                }
+                &:nth-of-type(2){
+                    width: 15px;
+                }
+                &:nth-of-type(3){
+                    width: 10px;
+                }
+                &:nth-of-type(4){
+                    width: 5px;
+                }
+            }
+        }
+        & .text{
+            padding-top: 15px;
+        }
+    }
+
+    
+    & .testimonial-right-content{
+        position: relative;
+        background-color: $light-color-one;
+        @include box-shadow (0px 30px 70px 0px rgba(0, 0, 0, 0.07));
+        border-radius: 50px;
+        max-width: 500px;
+        padding-top: 50px;
+        
+        & .quota{
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            @include transform(rotate(180deg));
+            opacity: 0.1;
+            
+            & i{
+                font-size: 130px;
+                line-height: 95px;
+                color: $primary-one;
+            }
+            
+        }
+    }
+
+    & .testimonial-content-wrapper{
+        position: relative;
+        left: 70px;
+
+        @media #{$lg}{
+            left: 0;
+        }
+        
+        @media #{$xs}{
+            left: 0;
+        }
+    }
+}
+
+
+.single-testimonial{
+    background-color: $white;
+    padding: 40px 30px 50px;
+    border-radius: 50px;
+
+    & .testimonial-text{
+        & .text{
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            color: $text-color-one;
+            padding-bottom: 25px;
+
+            @media #{$xs}{
+                font-size: 18px;
+                line-height: 32px;
+            }
+        }
+    }
+    & .testimonial-author{
+        border-top: 1px solid $light-color-one;
+        padding-top: 50px;
+
+        & .author-info{
+            & .author-image{
+                & img{
+                    border-radius: 50%;
+                    width: 70px;
+                }
+            }
+            & .author-name{
+                padding-left: 30px;
+
+                & .name{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $text-color-one;
+                }
+                & .sub-title{
+                    font-size: 14px;
+                    color: $text-color-two;
+                    margin-top: 5px;
+                }
+            }
+        }
+        & .author-review{
+            @media #{$xs}{
+                padding-left: 100px;
+                padding-top: 15px;
+            }
+            @media #{$sm}{
+                padding-left: 0;
+                padding-top: 15px;
+            }
+
+            & .star{
+                & li{
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $warning-color-one;
+                }
+            }
+            & .review{
+                font-size: 14px;
+                color: $black;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.testimonial-active{
+    & .slick-arrow{
+        position: absolute;
+        bottom: 0;
+        left: -635px;
+        font-size: 22px;
+        cursor: pointer;
+        color: $text-color-two;
+        @include transition(0.3s);
+
+        @media #{$lg}{
+            left: -480px;
+        }
+
+        &:hover{
+            color: $black;
+        }
+
+        &.next {
+            left: -600px;
+
+            @media #{$lg}{
+                left: -445px;
+            }
+        }
+    }
+}

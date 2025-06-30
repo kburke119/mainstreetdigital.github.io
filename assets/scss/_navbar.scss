@@ -1,0 +1,249 @@
+/*===========================
+        09.NAVBAR css 
+===========================*/
+
+
+
+.navbar-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 99;
+
+    & .navbar {
+        position: relative;
+        padding: 0;
+
+        & .navbar-toggler {
+            & .toggler-icon {
+                width: 30px;
+                height: 2px;
+                background-color: $white;
+                margin: 5px 0;
+                display: block;
+                position: relative;
+                @include transition(0.3s);
+            }
+
+            &.active {
+                & .toggler-icon {
+                    &:nth-of-type(1) {
+                        @include transform(rotate(45deg));
+                        top: 7px;
+                    }
+
+                    &:nth-of-type(2) {
+                        opacity: 0;
+                    }
+
+                    &:nth-of-type(3) {
+                        @include transform(rotate(135deg));
+                        top: -7px;
+                    }
+                }
+            }
+        }
+
+        & .navbar-collapse {
+            @media #{$md} {
+                position: absolute;
+                top: 115%;
+                left: 0;
+                width: 100%;
+                background-color: $light-color-two;
+                z-index: 8;
+                padding: 10px 0;
+                @include box-shadow (0px 10px 25px 0px rgba($text-color-one, 0.05));
+            }
+
+            @media #{$xs} {
+                position: absolute;
+                top: 115%;
+                left: 0;
+                width: 100%;
+                background-color: $light-color-two;
+                z-index: 8;
+                padding: 10px 0;
+                @include box-shadow (0px 10px 25px 0px rgba($text-color-one, 0.05));
+            }
+        }
+
+        & .navbar-nav {
+            & .nav-item {
+                margin: 0 16px;
+                position: relative;
+
+                & a {
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 700;
+                    padding: 26px 0;
+                    color: $white;
+                    text-transform: uppercase;
+                    position: relative;
+                    opacity: 0.8;
+                    @include transition(0.3s);
+
+                    @media #{$md} {
+                        padding: 10px 0;
+                        display: block;
+                        color: $text-color-one;
+                    }
+
+                    @media #{$xs} {
+                        padding: 10px 0;
+                        display: block;
+                        color: $text-color-one;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 32px;
+                        height: 4px;
+                        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 0%, rgb(255, 255, 255) 100%);
+                        background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1) 0%, rgb(255, 255, 255) 100%);
+                        background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgb(255, 255, 255) 100%);
+                        left: 50%;
+                        margin: 0 2px;
+                        bottom: 14px;
+                        @include transition(0.3s);
+                        @include transform(translate(-50%) scaleX(0));
+
+
+                        @media #{$md} {
+                            display: none;
+                        }
+
+                        @media #{$xs} {
+                            display: none;
+                        }
+                    }
+                }
+                
+                &.active,
+                &:hover {
+                    & > a {
+                        opacity: 1;
+                        color: $white;
+                        
+                        @media #{$md} {
+                            color: $text-color-one;
+                        }
+                        @media #{$xs} {
+                            color: $text-color-one;
+                        }
+
+                        &::before {
+                            @include transform(translate(-50%) scaleX(1));
+                        }
+                    }
+                }
+            }
+        }
+
+        & .navbar-btn {
+
+            @media #{$md} {
+                position: absolute;
+                right: 70px;
+                top: 7px;
+            }
+
+            @media #{$xs} {
+                position: absolute;
+                right: 60px;
+                top: 7px;
+            }
+
+            & li {
+                display: inline-block;
+                margin-right: 5px;
+
+                & a {
+                    padding: 10px 16px;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: $white;
+                    border: 2px solid;
+                    border-radius: 4px;
+                    @include transition(0.3s);
+
+                    &.light {
+                        border-color: $white;
+
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.4);
+                        }
+                    }
+
+                    &.solid {
+                        background-color: $white;
+                        border-color: $white;
+                        color: $primary-one;
+
+                        &:hover {
+                            background-color: transparent;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.sticky {
+        background-color: $white;
+        z-index: 999;
+        position: fixed;
+        @include box-shadow (0px 10px 25px 0px rgba($text-color-one, 0.05));
+        
+        & .navbar {
+            & .navbar-toggler {
+                & .toggler-icon {
+                    background-color: $text-color-one;
+                }
+            }
+
+            & .navbar-nav {
+                & .nav-item {
+                    & a {
+                        color: $text-color-one;
+                        opacity: 0.7;
+
+                        &::before {
+                            background: -webkit-linear-gradient(left, rgba(18, 18, 18, 0) 0%, rgb(18, 18, 18) 100%);
+                            background: -o-linear-gradient(left, rgba(18, 18, 18, 0) 0%, rgb(18, 18, 18) 100%);
+                            background: linear-gradient(to right, rgba(18, 18, 18, 0) 0%, rgb(18, 18, 18) 100%);
+                        }
+                    }
+                    
+                    &.active,
+                    &:hover{
+                        color: $text-color-one;
+                        opacity: 1;
+                    }
+                }
+            }
+            
+            & .navbar-btn {
+                & li {
+                    & a {
+                        &.light {
+                            border-color: $primary-one;
+                            color: $primary-one;
+                        }
+                        &.solid {
+                            border-color: $primary-one;
+                            background-color: $primary-one;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

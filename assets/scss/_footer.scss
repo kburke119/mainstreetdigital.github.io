@@ -1,0 +1,167 @@
+
+
+
+
+/*===========================
+    21.FOOTER css 
+===========================*/
+
+
+
+
+/*===== FOOTER FIVE =====*/
+
+.footer-area {
+    background-color: $light-color-two;
+    padding-top: 90px;
+    padding-bottom: 120px;
+
+    & .social {
+        & li {
+            display: inline-block;
+            margin: 0 5px;
+
+            & a {
+                font-size: 24px;
+                color: $text-color-three;
+                @include transition(0.3s);
+
+                &:hover {
+                    color: $primary-one;
+                }
+            }
+        }
+    }
+
+    & .footer-support {
+        padding-top: 21px;
+
+        & span {
+            font-size: 16px;
+            line-height: 24px;
+            color: $text-color-one;
+            font-weight: 600;
+            margin-top: 9px;
+            display: block;
+
+            @media #{$xs} {
+                display: block;
+            }
+        }
+    }
+
+    & .footer-app-store {
+        padding-top: 27px;
+
+        & ul {
+            & li {
+                display: inline-block;
+                margin-right: 8px;
+
+                @media #{$lg} {
+                    margin-right: 6px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                @media #{$xs} {
+                    width: 120px;
+                }
+
+                @media #{$sm} {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    & .copyright {
+        & .text {
+            color: $text-color-one;
+        }
+    }
+
+
+    &.footer-dark {
+        background-color: $text-color-one;
+        
+        & .social {
+            & li {
+                & a {
+                    color: $white;
+                }
+            }
+        }
+
+        & .footer-support {
+            padding-top: 21px;
+
+            & span {
+                color: $white;
+            }
+        }
+
+        & .footer-app-store {
+            padding-top: 27px;
+
+            & ul {
+                & li {
+                    color: $white;
+                }
+            }
+        }
+        
+        & .copyright {
+            & .text {
+                color: $white;
+            }
+        }
+    }
+}
+
+
+/*===== BACK TO TOP =====*/
+
+.back-to-top{
+    font-size: 20px;
+    color: $white;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 5px;
+    background-color: $primary-one;
+    text-align: center;
+    z-index: 99;
+    @include transition(0.3s);
+    display: none;
+    
+    &:hover{
+        color: $white;
+        background-color: $primary-one;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
