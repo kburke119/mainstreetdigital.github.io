@@ -7,7 +7,7 @@
   <meta name="description" content="Helping small businesses compete through digital strategy, analytics, and automation.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="assets/images/Logo_Final.png" type="image/png">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/LineIcons.css">
   <link rel="stylesheet" href="assets/css/animate.css">
@@ -20,11 +20,22 @@
       left: 0;
       width: 100%;
       z-index: 999;
-      background: #0052D4;
+      background: #0052D4 !important;
+    }
+
+    .header-area.sticky, .navbar-area.sticky {
+      position: fixed;
+      top: 0;
+      background-color: #0052D4 !important;
+      box-shadow: none;
+    }
+
+    .navbar-area.sticky .navbar {
+      transition: none !important;
     }
 
     body {
-      padding-top: 120px; /* offset for fixed navbar */
+      padding-top: 120px;
     }
 
     .navbar-brand img {
