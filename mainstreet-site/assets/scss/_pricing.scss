@@ -1,0 +1,116 @@
+
+
+/*===========================
+      16.PRICING css 
+===========================*/
+
+
+.pricing-area {
+    background-color: $light-color-two;
+    padding-top: 120px;
+    padding-bottom: 130px;
+}
+
+
+/*===== PRICING STYLE NINE =====*/
+
+.pricing-style {
+    @include box-shadow (0 3px 6px 0 rgba(0, 0, 0, 0.16));
+    padding: 24px 20px 38px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    background: -webkit-linear-gradient(rgba(43, 219, 220, 1) 0%, rgba(0, 103, 244, 1) 100%);
+    background: -o-linear-gradient(rgba(43, 219, 220, 1) 0%, rgba(0, 103, 244, 1) 100%);
+    background: linear-gradient(rgba(43, 219, 220, 1) 0%, rgba(0, 103, 244, 1) 100%);
+
+    & .pricing-icon {
+        & img {
+            width: 190px;
+        }
+    }
+
+    & .pricing-header {
+        & .sub-title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 25px;
+            color: $white;
+            position: relative;
+            margin-top: 24px;
+        }
+
+        & .month {
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 25px;
+            color: $white;
+            margin-top: 3px;
+
+            & .price {
+                font-size: 36px;
+                font-weight: 600;
+                line-height: 45px;
+                color: $white;
+                margin-top: 8px;
+
+                @media #{$sm} {
+                    font-size: 24px;
+                    margin-top: 32px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
+    & .pricing-list {
+        margin-top: 24px;
+
+        & ul {
+            & li {
+                font-size: 16px;
+                line-height: 24px;
+                color: $white;
+                margin-top: 16px;
+
+                @media #{$lg} {
+                    font-size: 14px;
+                    margin-top: 12px;
+                }
+
+                @media #{$xs} {
+                    font-size: 14px;
+                    margin-top: 12px;
+                }
+
+                @media #{$sm} {
+                    font-size: 16px;
+                    margin-top: 16px;
+                }
+
+                & i {
+                    color: $white;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    & .pricing-btn {
+        margin-top: 31px;
+
+        & .main-btn {
+            background-color: $white;
+            border-color: $white;
+
+            &:hover {
+                color: $primary-one;
+                @include box-shadow (0 3px 16px 0 rgba(0, 0, 0, 0.16));
+            }
+        }
+    }
+}
+
+
+
+

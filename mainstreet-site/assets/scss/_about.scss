@@ -1,0 +1,104 @@
+
+
+
+/*===========================
+       15.ABOUT css 
+===========================*/
+
+
+
+.about-area{
+    padding-top: 80px;
+    padding-bottom: 130px;
+    position: relative;
+    
+    & .about-title{
+        & .sub-title{
+            font-size: 18px;
+            font-weight: 400;
+            color: $primary-one;
+            text-transform: uppercase;
+            
+            @media #{$xs} {
+                font-size: 16px;
+            }
+        }
+        & .title{
+            font-size: 30px;
+            padding-top: 10px;
+            
+            @media #{$lg} {
+                font-size: 26px;
+            }
+            @media #{$xs} {
+                font-size: 22px;            
+            }
+        }
+    }
+
+    & .about-accordion{
+        & .accordion{
+            & .card{
+                border: 0;
+                background: none;
+                
+                & .card-header{
+                    padding: 0;
+                    border: 0;
+                    background: none;
+                    margin-top: 40px;
+                    
+                    & a{
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $black;
+                        display: block;
+                        position: relative;
+                        padding-right: 20px;
+                        
+                        @media #{$lg} {
+                            font-size: 16px;
+                        }
+                        @media #{$xs} {
+                            font-size: 16px;
+                        }
+                        
+                        &::before{
+                            content: '\ea58';
+                            font-family: 'LineIcons';
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            @include transform(translateY(-50%));
+                        }
+                    }
+                    
+                    & .collapsed{
+                        &::before{
+                            content: '\ea5c';
+                        }
+                    }
+                }
+                & .card-body{
+                    padding: 20px 20px 0;
+                    
+                    & .text{}
+                }
+            }
+        }
+    }
+
+    & .about-image{
+        & img{
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+

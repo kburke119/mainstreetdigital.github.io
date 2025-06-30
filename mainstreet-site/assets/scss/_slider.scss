@@ -1,0 +1,225 @@
+/*===========================
+       10.SLIDER css 
+===========================*/
+
+
+.slider_area{}
+
+.carousel-item {
+    background-color: $primary-one;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 33%;
+        height: 100%;
+        background: -webkit-linear-gradient(rgba(0, 103, 244, 0.3) 0%, rgba(43, 219, 220, 0.3) 100%);
+        background: -o-linear-gradient(rgba(0, 103, 244, 0.3) 0%, rgba(43, 219, 220, 0.3) 100%);
+        background: linear-gradient(rgba(0, 103, 244, 0.3) 0%, rgba(43, 219, 220, 0.3) 100%);
+        top: 0;
+        right: 15%;
+        @include transform(skewX(20deg));
+
+        @media #{$lg} {
+            width: 40%;
+
+        }
+
+        @media #{$md} {
+            width: 60%;
+        }
+
+        @media #{$xs} {
+            width: 50%;
+            right: 45%;
+        }
+
+        @media #{$sm} {
+            right: 25%;
+        }
+    }
+
+    & .slider-image-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        z-index: 9;
+
+        & .slider-image {
+            max-width: 680px;
+            width: 100%;
+
+            & img {}
+        }
+    }
+}
+
+.slider-content {
+    position: relative;
+    z-index: 9;
+    padding-top: 240px;
+    padding-bottom: 200px;
+    
+    @media #{$xs} {
+        padding-top: 190px;
+        padding-bottom: 150px;
+    }
+
+    & .title {
+        font-size: 88px;
+        line-height: 96px;
+        color: $white;
+        font-weight: 700;
+
+        @media #{$lg} {
+            font-size: 58px;
+            line-height: 80px;
+        }
+        @media #{$md} {
+            font-size: 72px;
+            line-height: 90px;
+        }
+        @media #{$xs} {
+            font-size: 34px;
+            line-height: 45px;
+        }
+    }
+
+    & .text {
+        color: $white;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 16px;
+    }
+
+    & .slider-btn {
+        padding-top: 16px;
+
+        & li {
+            display: inline-block;
+            margin: 16px 8px 0;
+
+            @media #{$xs} {
+                margin: 16px 3px 0;
+            }
+
+            & a {
+                &.rounded-one{
+                    background-color: $white;
+                    border-color: $white;
+
+                    &:hover{
+                        background-color: transparent;
+                        color: $white;
+                    }
+                }
+                &.rounded-two{
+                    border-color: $white;
+
+                    &:hover{
+                        background-color: $white;
+                        color: $primary-one;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.carousel-indicators {
+    margin-bottom: 50px;
+
+    & li {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50px;
+        border: 0;
+        margin: 0px 2px;
+        
+        @media #{$md}{
+            width: 13px;
+            height: 13px;
+        }
+        @media #{$xs}{
+            width: 13px;
+            height: 13px;
+        }
+
+        &.active {
+            background-color: $white;
+            width: 16px;
+            border-radius: 50px;
+            
+            @media #{$md}{
+                width: 23px;
+            }
+            @media #{$xs}{
+                width: 23px;
+            }
+        }
+    }
+}
+
+
+
+
+.carousel {
+    & .carousel-control-prev,
+    & .carousel-control-next {
+        top: 50%;
+        font-size: 32px;
+        color: $white;
+        bottom: auto;
+        left: 60px;
+        right: auto;
+        opacity: 1;
+        @include transform(translateY(-50%));
+        z-index: 99;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 5px;
+
+        @media #{$lg} {
+            left: 30px;
+        }
+        @media #{$md} {
+            display: none;
+        }
+        @media #{$xs} {
+            display: none;
+        }
+    }
+    
+    & .carousel-control-next {
+        right: 60px;
+        left: auto;
+
+        @media #{$lg} {
+            right: 30px;
+        }
+        @media #{$md} {
+            right: 30px;
+        }
+        @media #{$xs} {
+            right: 30px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
