@@ -7,39 +7,38 @@
   <meta name="description" content="Helping small businesses compete through digital strategy, analytics, and automation.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="shortcut icon" href="assets/images/Logo_Final.png" type="image/png">
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/LineIcons.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="assets/css/default.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .sticky {
-      position: -webkit-sticky;
-      position: sticky;
+    .navbar-area {
+      position: fixed;
       top: 0;
+      left: 0;
+      width: 100%;
       z-index: 999;
       background: #0052D4;
     }
 
+    body {
+      padding-top: 120px; /* offset for fixed navbar */
+    }
+
     .navbar-brand img {
       height: 100px;
-      transition: height 0.3s ease;
       background-color: white;
       padding: 4px 8px;
       border-radius: 6px;
-    }
-
-    .navbar-area.sticky .navbar-brand img {
-      height: 100px !important;
-      background-color: white;
     }
   </style>
 </head>
 
 <body>
   <!-- Header Navigation -->
-  <header class="header-area sticky">
+  <header class="header-area">
     <div class="navbar-area">
       <div class="container">
         <div class="row">
