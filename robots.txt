@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /assets/
+Allow: /assets/images/
+Allow: /assets/css/
+Allow: /assets/js/
+
+Sitemap: https://mainstreetdigitalconsulting.com/sitemap.xml

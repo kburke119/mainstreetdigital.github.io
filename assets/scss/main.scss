@@ -1,0 +1,95 @@
+// Main SCSS - Import all partials
+@import 'variables';
+@import 'mixins';
+@import 'components';
+@import 'layout';
+@import 'animations';
+
+// Base styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  line-height: 1.6;
+  color: $text-primary;
+  background-color: $background-white;
+  overflow-x: hidden;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-secondary;
+  font-weight: 600;
+  line-height: 1.2;
+  color: $text-primary;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+
+p {
+  font-size: 1.1rem;
+  color: $text-secondary;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: $transition-base;
+  
+  &:hover {
+    color: $primary-dark;
+  }
+}
+
+// Utility classes
+.text-gradient {
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shadow-soft {
+  box-shadow: $shadow-soft;
+}
+
+.border-radius-lg {
+  border-radius: $border-radius-lg;
+}
+
+// Responsive utilities
+@include media-breakpoint-down(md) {
+  .mobile-center {
+    text-align: center;
+  }
+  
+  .mobile-stack {
+    flex-direction: column;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .mobile-full-width {
+    width: 100%;
+  }
+}
