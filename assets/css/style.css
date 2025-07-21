@@ -1,0 +1,266 @@
+/* Additional Style Overrides and Enhancements */
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced Typography */
+.hero-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.section-title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Enhanced Hover Effects */
+.service-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover {
+  transform: translateY(-15px) scale(1.02);
+}
+
+/* Enhanced Button Styles */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Form Styles */
+.form-control {
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  transform: translateY(-2px);
+}
+
+/* Loading Animation */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Enhanced Navigation */
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Enhanced Logo */
+.logo {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Portfolio Image Optimization */
+.portfolio-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+/* Enhanced Contact Form */
+.contact-form {
+  position: relative;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
+  border-radius: var(--border-radius-lg);
+  z-index: -1;
+}
+
+/* Enhanced Service Icons */
+.service-icon {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.service-card:hover .service-icon::before {
+  width: 100%;
+  height: 100%;
+}
+
+/* Enhanced About Section */
+.about-image {
+  position: relative;
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: -20px;
+  bottom: -20px;
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius-lg);
+  z-index: -1;
+  opacity: 0.1;
+}
+
+/* Enhanced Portfolio */
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.portfolio-item:hover::before {
+  opacity: 1;
+}
+
+/* Enhanced Hero Section */
+.hero-section {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+  
+  .about-image::before {
+    display: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .header-area,
+  .hero-nav,
+  .contact-form,
+  .footer-section {
+    display: none;
+  }
+  
+  section {
+    padding: 2rem 0;
+  }
+  
+  .hero-section {
+    min-height: auto;
+    background: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-color: #0000ff;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --background-light: #ffffff;
+    --border-color: #000000;
+  }
+  
+  .btn-primary {
+    background: #0000ff;
+    color: #ffffff;
+  }
+  
+  .service-card {
+    border: 2px solid #000000;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hero-slide {
+    transition: none;
+  }
+  
+  .service-card:hover {
+    transform: none;
+  }
+}
